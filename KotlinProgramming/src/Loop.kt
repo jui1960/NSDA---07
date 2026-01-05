@@ -15,11 +15,20 @@ fun main(){
 
 
     //do while loop
-    var i = 0
-    do{
+//    var i = 0
+//    do{
+//        println(i)
+//        i++
+//    }while (i<7)
+
+    print("Enter your number of n : ")
+    val n = readln().toInt()
+    var i = 1
+    while(i<=n){
         println(i)
         i++
-    }while (i<7)
+    }
+
 
 }
 
