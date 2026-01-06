@@ -1,5 +1,5 @@
 
-//Assignment operator
+//Assignment operators
 fun main(){
     var a = 20
     println("Initial value of a is : $a")

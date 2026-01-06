@@ -25,8 +25,7 @@ logical operator a&&b a||b a!b
 //        println(x2)
 //    }
 //}
-
-//Arithmetic operator
+// Arithmetic operators
 fun main() {
     print("Enter your number of a : ")
     var a = readln().toInt()
@@ -39,11 +38,11 @@ fun main() {
     val div = a/b
     val mod = a%b
 
-    println("Addition of a = $a and b = $b is = $sum")
-    println("Substraction of a = $a and b = $b is = $sub")
-    println("Multiplication of a = $a and b = $b is = $mul")
-    println("Division of a = $a and b = $b is = $div")
-    println("Modulation of a = $a and b = $b is = $mod")
+    println("Addition of a = $a and b = $b is : $sum")
+    println("Substraction of a = $a and b = $b is : $sub")
+    println("Multiplication of a = $a and b = $b is : $mul")
+    println("Division of a = $a and b = $b is : $div")
+    println("Modulation of a = $a and b = $b is : $mod")
     a++
     b--
     println("Increment value of a is = $a")
