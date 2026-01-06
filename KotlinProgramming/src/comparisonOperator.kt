@@ -5,7 +5,7 @@ fun main() {
     val b = readln().toInt()
 
     val isequal = (a == b)
-    println("$a == $b equal: $isequal")
+    println("$a == $b both equal: $isequal")
     val isnotequal = (a != b)
     println("$a != $b notequal: $isnotequal")
     val Greater = (a > b)
