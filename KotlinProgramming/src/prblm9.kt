@@ -1,8 +1,8 @@
 fun main() {
-    print("Enter your temp value: ")
-    val temp= readLine()!!.toDouble()
-    if (temp < 0) println("Freezing")
-    else if (temp >= 0 && temp <= 15) println("Cold")
-    else if (temp >= 16 && temp <= 30) println("Warm")
-    else println("Hot")
+    print("Enter your number : ")
+    val number = readLine()!!.toDouble()
+    if(number>0 && number<=9) println("1 digit")
+    else if(number>=10 && number<=99) println("2 digits")
+    else if(number>=100 && number<=999) println("3 digits")
+    else println("More than 3 digits")
 }
