@@ -27,5 +27,4 @@ fun main(){
     a%=0.05
     println("${(a/0.01).toInt()} moeda(s) de R$ 0.01")
 
-
 }
