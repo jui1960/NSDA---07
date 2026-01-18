@@ -12,6 +12,7 @@
 //}
 
 
+/*
 val ans = { a: Int, b: Int, c: Boolean ->
     if (c) {
         true
@@ -26,4 +27,26 @@ fun main() {
 
     val rs2 = ans(10, 5, false)
     println("Result 2: $rs2")
+}*/
+
+//2 ta songha jog
+
+/*
+fun main(){
+    val a : (Int,Int)->Int = {a,b->a+b}
+    println(a(10,5))
+}*/
+
+
+/*
+
+fun main(){
+    val lam : (Int)-> Boolean = { lam -> lam%2==0}
+    println(lam(4))
+}*/
+
+
+fun main() {
+    val square: (Int) -> Int = { n -> n * n }
+    println(square(5))
 }
