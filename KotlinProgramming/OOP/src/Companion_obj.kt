@@ -1,3 +1,4 @@
+/*
 class Fruit {
 
     companion object {
@@ -20,7 +21,44 @@ fun main() {
     Fruit.display()
 
 
-  /*  Fruit()  kisui print kore na
-    Fruit.display("mango")*/
+  */
+/*  Fruit()  kisui print kore na
+    Fruit.display("mango")*//*
+
+
+}
+*/
+
+
+class Sum {
+    companion object {
+        fun add(a: Int, b: Int): Int {
+            return a + b
+
+        }
+
+        fun sub(a: Int, b: Int): Int {
+            return a - b
+
+        }
+
+        fun mul(a: Int, b: Int): Int {
+            return a * b
+
+        }
+
+        fun div(a: Int, b: Int): Int {
+            return a / b
+
+        }
+    }
+}
+
+fun main() {
+
+    println(
+        "sum : ${Sum.add(2, 3)} , " + "Sub : ${Sum.sub(2, 3)} ," +
+                " Mul : ${Sum.mul(5, 6)} ," + " Div : ${Sum.div(50, 6)}"
+    )
 
 }
