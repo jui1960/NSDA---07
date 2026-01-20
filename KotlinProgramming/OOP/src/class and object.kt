@@ -1,4 +1,4 @@
-class phone{
+class Phone{
     var name=""
     var battery = 0
     var camera = 0
@@ -12,7 +12,7 @@ class phone{
 }
 
 fun main() {
-    val obj = phone()   //obj create
+    val obj = Phone()   //obj create
     obj.name="Redmi y13"
     obj.battery=20
     obj.camera=4
