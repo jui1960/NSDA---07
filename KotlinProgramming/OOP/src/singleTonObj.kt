@@ -4,11 +4,15 @@ object Phonee {
     var color = "blue"
 
     fun display(){
-        println("phone name is$name& battery is $battery health & color is $color" )
+        println("phone name is $name& battery is $battery health & color is $color" )
     }
 }
 
 fun main() {
+    Phonee.name = "redmi y3 "
+    Phonee.battery = 20
+    Phonee.color = "blue"
+
     Phonee.display()
 }
 
