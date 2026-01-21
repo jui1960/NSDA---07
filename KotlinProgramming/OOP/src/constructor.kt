@@ -22,24 +22,22 @@ class Carr(var brand: String, var model: String, var year: Int)
 
 
 class Secondaryconst{
-    var  name : String
+    var  Name : String
     var roll : Int
-    constructor(name: String,roll : Int){
-        this.name = name
+    constructor(a: String,roll : Int){
+        this.Name = a
         this.roll = roll
 
     }
     constructor(name: String){
-        this.name = name
+        this.Name = name
         this.roll = 0
     }
 }
 fun main(args:Array<String>){
     val s1 = Secondaryconst("jannati",1)
     val s2 = Secondaryconst("mahmuda")
-    println("${s1.name} ${s1.roll}")
-    println(s2.name)
+    println("${s1.Name} ${s1.roll}")
+    println(s2.Name)
 }
-
-
 

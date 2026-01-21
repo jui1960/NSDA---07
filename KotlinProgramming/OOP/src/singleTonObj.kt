@@ -1,15 +1,23 @@
 object Phonee {
     var name = " "
-    var battery = 20
-    var color = "blue"
+    var battery = 0
+    var color = " "
 
-    fun display(){
-        println("phone name is $name& battery is $battery health & color is $color" )
+    fun display() {
+        println("phone name is $name& battery is $battery health & color is $color")
     }
-    fun show(){
+
+    fun show() {
         println("singleton object")
     }
 }
+object Phoneee{
+    var name = " "
+    var battery = 0
+    var color = " "
+}
+
+
 
 fun main() {
     Phonee.name = "redmi y3 "
@@ -18,6 +26,8 @@ fun main() {
 
     Phonee.display()
     Phonee.show()
+
+
 }
 
 

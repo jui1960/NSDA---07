@@ -36,7 +36,6 @@ class Sum {
             return a + b
 
         }
-
         fun sub(a: Int, b: Int): Int {
             return a - b
 
@@ -52,6 +51,8 @@ class Sum {
 
         }
     }
+
+
 }
 
 fun main() {
