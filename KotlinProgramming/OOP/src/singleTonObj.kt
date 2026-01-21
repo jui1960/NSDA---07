@@ -6,6 +6,9 @@ object Phonee {
     fun display(){
         println("phone name is $name& battery is $battery health & color is $color" )
     }
+    fun show(){
+        println("singleton object")
+    }
 }
 
 fun main() {
@@ -14,6 +17,7 @@ fun main() {
     Phonee.color = "blue"
 
     Phonee.display()
+    Phonee.show()
 }
 
 
