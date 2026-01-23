@@ -1,26 +1,26 @@
 object Phonee {
-    var name = " "
+    var namee = " "
     var battery = 0
     var color = " "
 
     fun display() {
-        println("phone name is $name& battery is $battery health & color is $color")
+        println("phone name is $namee& battery is $battery health & color is $color")
     }
 
     fun show() {
         println("singleton object")
     }
 }
-object Phoneee{
+
+object Phoneee {
     var name = " "
     var battery = 0
     var color = " "
 }
 
 
-
 fun main() {
-    Phonee.name = "redmi y3 "
+    Phonee.namee = "redmi y3 "
     Phonee.battery = 20
     Phonee.color = "blue"
 
