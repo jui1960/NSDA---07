@@ -25,7 +25,7 @@ fun main() {
 
 }*/
 
-fun add(a: Double, b: Double): Double {
+fun addd(a: Double, b: Double): Double {
     return a + b
 }
 class Employ(val name: String, val id: Int, val department: String, var salary: Double) {
@@ -33,7 +33,7 @@ class Employ(val name: String, val id: Int, val department: String, var salary: 
     fun sowdetails(ans: Double) {
         println(
             "Name : $name id : $id Department : $department " +
-                    "Salary : $salary   Incressed salary : ${add(ans, salary)}"
+                    "Salary : $salary   Incressed salary : ${addd(ans, salary)}"
         )
 
 
@@ -48,7 +48,7 @@ fun main() {
 
     print("Increment salary : ")
     val a = readLine()!!.toDouble()
-    add(a, employ.salary)
+    addd(a, employ.salary)
     employ.sowdetails(a)
 
 

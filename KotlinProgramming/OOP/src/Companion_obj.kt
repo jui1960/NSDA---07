@@ -30,7 +30,7 @@ fun main() {
 */
 
 
-class Sum {
+class Summ {
     companion object {
         fun add(a: Int, b: Int): Int {
             return a + b
@@ -58,8 +58,8 @@ class Sum {
 fun main() {
 
     println(
-        "sum : ${Sum.add(2, 3)} , " + "Sub : ${Sum.sub(2, 3)} ," +
-                " Mul : ${Sum.mul(5, 6)} ," + " Div : ${Sum.div(50, 6)}"
+        "sum : ${Summ.add(2, 3)} , " + "Sub : ${Summ.sub(2, 3)} ," +
+                " Mul : ${Summ.mul(5, 6)} ," + " Div : ${Summ.div(50, 6)}"
     )
 
 }

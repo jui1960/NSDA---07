@@ -1,11 +1,11 @@
 class Phone{
-    var name=""
-    var battery = 0
+    var namee=""
+    var batteryy = 0
     var camera = 0
     var color = ""
 
     fun display(){
-        println("phone name : $name , phone battery health : $battery," +
+        println("phone name : $namee , phone battery health : $batteryy," +
                 "camera : $camera,color : $color")
     }
 
@@ -13,8 +13,8 @@ class Phone{
 
 fun main() {
     val obj = Phone()   //obj create
-    obj.name="Redmi y13"
-    obj.battery=20
+    obj.namee="Redmi y13"
+    obj.batteryy=20
     obj.camera=4
     obj.color="red"
     obj.display()
