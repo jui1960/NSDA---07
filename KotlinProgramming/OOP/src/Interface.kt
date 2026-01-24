@@ -1,7 +1,8 @@
+/*
 // Interface
 interface Vehicle {
-    fun start()    // Body নেই
-    fun stop()     // Body নেই
+    fun start()
+    fun stop()
 }
 
 // Class implements Interface
@@ -29,4 +30,29 @@ fun main() {
 
     car.start()  // Car started
     bike.start() // Bike started
+}
+*/
+
+interface Engine {
+    fun startEngine()
+}
+
+interface MusicSystem {
+    fun playMusic()
+}
+
+class BigCar : Engine, MusicSystem {
+    override fun startEngine() {
+        println("Start Engin")
+    }
+
+    override fun playMusic() {
+        println("Play Music")
+    }
+}
+
+fun main() {
+    val car = BigCar()
+    car.startEngine()
+    car.playMusic()
 }
