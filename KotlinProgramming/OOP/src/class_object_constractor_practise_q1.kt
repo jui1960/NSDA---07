@@ -77,7 +77,7 @@ class Rectangle{
         this.width = width
     }
     fun draw() {
-        println(height*width)
+        println("Rectangle Area : ${height*width}")
     }
 }
 fun main() {
