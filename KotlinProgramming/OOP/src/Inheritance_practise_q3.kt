@@ -17,10 +17,11 @@ Input all data
 
 Display student info
 
-📌 Concepts: Inheritance, protected*//*
+📌 Concepts: Inheritance, protected*/
 
 
 
+/*
 open class Person {
     var name = " "
     var age = 0
@@ -43,15 +44,15 @@ fun main() {
     print("Enter mark : ")
     val mark = readLine()!!.toDouble()
 
-    */
-/*obj.name = name_
+obj.name = name_
     obj.age = age
     obj.roll = roll
-    obj.mark = mark*//*
+    obj.mark = mark
 
 
     obj.display()
 
-}*/
+}
 
+*/
 
