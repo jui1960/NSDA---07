@@ -1,4 +1,3 @@
-
 open class Person {
     protected var name = ""
     protected var age = 0
@@ -18,11 +17,12 @@ class Student : Person() {
         marks = m
     }
 
+
     fun display() {
-        println("Name: $name")
-        println("Age: $age")
-        println("Roll: $roll")
-        println("Marks: $marks")
+        println("Name is : $name")
+        println("Age is : $age")
+        println("Roll is : $roll")
+        println("Marks is : $marks")
     }
 }
 
