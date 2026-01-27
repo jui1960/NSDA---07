@@ -1,4 +1,4 @@
-/*  simple single inheritance
+  //simple single inheritance
 
 
 open class Fruit{
@@ -20,7 +20,7 @@ fun main() {
     obj.display()
     obj.inherit()
 
-    single inheritance a aktu super class thake and akta subclass thake
-}*/
 
+}
+ // single inheritance a aktu super class thake and akta subclass thake
 

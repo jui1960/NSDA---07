@@ -30,11 +30,11 @@ fun main(){
     val num1 = 10
     val num2 = 5
 
-    println(cal(num1, num2,add))
-    println(cal(num1, num2,sub))
+    println(caal(num1, num2,add))
+    println(caal(num1, num2,sub))
 
 }
-fun cal(a:Int,b: Int,operation:(Int,Int)->Int):Int{
+fun caal(a:Int,b: Int,operation:(Int,Int)->Int):Int{
     return operation(a, b)
 
 }

@@ -11,14 +11,11 @@ object Phonee {
         println("singleton object")
     }
 }
-
 object Phoneee {
     var name = " "
     var battery = 0
     var color = " "
 }
-
-
 fun main() {
     Phonee.namee = "redmi y3 "
     Phonee.battery = 20
@@ -26,8 +23,6 @@ fun main() {
 
     Phonee.display()
     Phonee.show()
-
-
 }
 
 
