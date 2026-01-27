@@ -26,9 +26,7 @@ class BankAccount(
             println("withdrew $withdrawamount successfully")
         }
     }
-
 }
-
 fun main(){
     val obj = BankAccount("616382",500.0)
     print("Enter your deposit balance : ")
