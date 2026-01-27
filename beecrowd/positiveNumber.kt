@@ -14,3 +14,17 @@ fun main(args: Array<String>) {
     println("$cnt valores positivos")
 	
 }
+
+
+using filter
+
+import java.util.*
+
+fun main(args: Array<String>) {
+
+	
+        val numbers = List(6) { readLine()!!.toDouble() } 
+        val positiveCount = numbers.filter { it > 0 }.size 
+        println("$positiveCount valores positivos")
+	
+}
