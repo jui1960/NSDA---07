@@ -1,5 +1,7 @@
 abstract class Appliance {
-    abstract fun calculatePowerUsage()
+    open fun calculatePowerUsage(){
+
+    }
 }
 
 class Fan : Appliance() {
@@ -34,10 +36,11 @@ class LightBulb : Appliance() {
 
 fun main() {
     val fan = Fan()
-    fan.calculatePowerUsage()
     val airConditioner = AirConditioner()
-    airConditioner.calculatePowerUsage()
     val lightBulb = LightBulb()
+
+    fan.calculatePowerUsage()
+    airConditioner.calculatePowerUsage()
     lightBulb.calculatePowerUsage()
 
 
