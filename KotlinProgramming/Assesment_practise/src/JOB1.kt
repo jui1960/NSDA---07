@@ -9,7 +9,7 @@ class SmartLock(
             isLocked = false
             println("Access Granted")
         } else {
-            println("Access Denied")
+            println("Access fail")
         }
     }
 
@@ -24,7 +24,7 @@ class SmartLock(
 }
 
 fun main() {
-    val myLock = SmartLock("LIVING-ROOM-01", 1234)
+    val myLock = SmartLock("ROOM-01", 1234)
 
     println("Status: ${myLock.getStatus()}")
 
