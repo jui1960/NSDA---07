@@ -1,7 +1,7 @@
-abstract class Apppliance{
+abstract class Appppliance{
     abstract fun calculatePowerUsage()
 }
-class fan():Apppliance(){
+class fan():Appppliance(){
     override fun calculatePowerUsage(){
         val run = 16
         val wat = 75
@@ -9,7 +9,7 @@ class fan():Apppliance(){
         println("Fan = $kmh")
     }
 }
-class airConditioner():Apppliance(){
+class airConditioner():Appppliance(){
     override fun calculatePowerUsage(){
         val run = 11
         val wat = 1500
@@ -17,7 +17,7 @@ class airConditioner():Apppliance(){
         println("AirConditioner = $kmh")
     }
 }
-class lightBulb():Apppliance(){
+class lightBulb():Appppliance(){
     override fun calculatePowerUsage(){
         val run = 13
         val wat = 10
