@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "3_Scroll_application"
+rootProject.name = "1_MyFirst_Application"
 include(":app")

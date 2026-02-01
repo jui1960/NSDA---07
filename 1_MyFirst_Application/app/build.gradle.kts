@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.a3_scroll_application"
+    namespace = "com.example.a1_myfirst_application"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.a3_scroll_application"
+        applicationId = "com.example.a1_myfirst_application"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -45,5 +45,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("de.hdodenhof:circleimageview:3.1.0")
 }
