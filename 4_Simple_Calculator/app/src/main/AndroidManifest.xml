@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._4_Simple_Calculator">
         <activity
+            android:name=".Simple_calculator"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
