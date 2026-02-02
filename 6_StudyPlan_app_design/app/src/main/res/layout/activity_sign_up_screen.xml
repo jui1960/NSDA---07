@@ -9,7 +9,7 @@
     tools:context=".SignUp_screen"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="#AFCADCF4"
+    android:background="@color/white"
 
     >
 
@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your username"
-        android:textColor="#A6A1A1"
+        android:textColor="#050505"
         android:layout_marginHorizontal="25.dp"
         android:layout_marginTop="40.dp"
         android:paddingBottom="15.dp"

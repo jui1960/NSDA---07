@@ -4,6 +4,11 @@ plugins {
 }
 
 android {
+    buildFeatures{
+        viewBinding = true
+
+    }
+
     namespace = "com.example.a6_studyplan_app_design"
     compileSdk = 36
 
