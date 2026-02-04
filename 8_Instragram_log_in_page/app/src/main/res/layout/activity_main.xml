@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/gradiann">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instagram"
+        android:textStyle="italic"
+        android:textSize="45.sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="90.dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/white"
+
+        android:hint="username or email address"
+        android:padding="12.dp"
+        android:layout_marginTop="45.dp"
+        android:layout_marginHorizontal="30.dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/white"
+        android:hint="password"
+        android:padding="12.dp"
+        android:layout_marginTop="15.dp"
+        android:layout_marginHorizontal="30.dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgotten password?"
+        android:textColor="@color/white"
+        android:layout_gravity="right"
+        android:layout_marginRight="30.dp"
+        android:layout_marginVertical="15.dp"
+        android:textSize="15.sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30.dp"
+        android:backgroundTint="#29A0FD"
+        android:background="@drawable/border"
+        android:text="Log In"
+        android:textColor="@color/white"
+
+       />
+
+</LinearLayout>
