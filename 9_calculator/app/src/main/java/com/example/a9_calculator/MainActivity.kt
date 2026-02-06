@@ -1,12 +1,7 @@
 package com.example.a9_calculator
-
 import android.os.Bundle
-import android.widget.Toast
-import java.lang.ArithmeticException
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.a9_calculator.databinding.ActivityMainBinding
 
 
@@ -50,7 +45,6 @@ class MainActivity : AppCompatActivity() {
         lastNumeric = true
         lastdot = false
     }
-
     private fun dotClick() {
         if (lastNumeric && !lastdot) {
             binding.input1.append(".")
@@ -58,7 +52,6 @@ class MainActivity : AppCompatActivity() {
             lastdot = true
         }
     }
-
     private fun operatorClick(operator: String) {
         val currenttext = binding.input1.text.toString()
         if (lastNumeric && !isOperatorAdded(currenttext)) {
@@ -68,7 +61,6 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-
     private fun allclear() {
         binding.input1.text.clear()
         binding.second.text = ""
@@ -112,7 +104,6 @@ class MainActivity : AppCompatActivity() {
         val splitValue = if (operator == "-" && tvValue.startsWith("-")) {
             tvValue.substring(1).split("-").let { listOf("-" + it[0], it[1]) }
         } else tvValue.split(operator)
-
         if (splitValue.size < 2) return
         val num1 = splitValue[0].toDoubleOrNull() ?: 0.0
         val num2 = splitValue[1].toDoubleOrNull() ?: 0.0
