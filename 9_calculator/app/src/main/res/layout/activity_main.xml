@@ -67,7 +67,11 @@
             android:backgroundTint="#198DC1"
             android:padding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.378">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt1"
@@ -146,7 +150,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/bt7"
                 app:layout_constraintStart_toEndOf="@id/bt5"
-                app:layout_constraintTop_toTopOf="@id/bt5" />
+                app:layout_constraintTop_toBottomOf="@+id/bt2" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt7"
@@ -159,7 +163,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/bt8"
                 app:layout_constraintStart_toEndOf="@id/bt6"
-                app:layout_constraintTop_toTopOf="@id/bt5" />
+                app:layout_constraintTop_toBottomOf="@+id/bt3" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt8"
@@ -199,7 +203,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/bt11"
                 app:layout_constraintStart_toEndOf="@id/bt9"
-                app:layout_constraintTop_toTopOf="@id/bt9" />
+                app:layout_constraintTop_toBottomOf="@+id/bt6" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt11"
@@ -212,7 +216,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/bt12"
                 app:layout_constraintStart_toEndOf="@id/bt10"
-                app:layout_constraintTop_toTopOf="@id/bt9" />
+                app:layout_constraintTop_toBottomOf="@+id/bt7" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt12"
@@ -232,6 +236,7 @@
                 android:layout_width="0dp"
                 android:layout_height="65dp"
                 android:layout_margin="4dp"
+                android:layout_marginTop="36dp"
                 android:background="@drawable/border"
                 android:backgroundTint="#17AF90"
                 android:text="1"
@@ -251,7 +256,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/bt15"
                 app:layout_constraintStart_toEndOf="@id/bt13"
-                app:layout_constraintTop_toTopOf="@id/bt13" />
+                app:layout_constraintTop_toBottomOf="@+id/bt10" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt15"
@@ -264,7 +269,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/bt16"
                 app:layout_constraintStart_toEndOf="@id/bt14"
-                app:layout_constraintTop_toTopOf="@id/bt13" />
+                app:layout_constraintTop_toBottomOf="@+id/bt11" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt16"
@@ -277,17 +282,19 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/bt15"
-                app:layout_constraintTop_toTopOf="@id/bt13" />
+                app:layout_constraintTop_toBottomOf="@+id/bt12" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt17"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
                 android:layout_margin="4dp"
+                android:layout_marginTop="24dp"
                 android:background="@drawable/border"
                 android:backgroundTint="#17AF90"
                 android:text="0"
                 android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/bt18"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/bt13" />
@@ -303,7 +310,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/bt19"
                 app:layout_constraintStart_toEndOf="@id/bt17"
-                app:layout_constraintTop_toTopOf="@id/bt17" />
+                app:layout_constraintTop_toBottomOf="@+id/bt14" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt19"
@@ -315,7 +322,8 @@
                 android:text="X"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/bt20"
-                app:layout_constraintStart_toEndOf="@id/bt18"  app:layout_constraintTop_toTopOf="@id/bt17" />
+                app:layout_constraintStart_toEndOf="@id/bt18"
+                app:layout_constraintTop_toBottomOf="@+id/bt15" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt20"
@@ -328,7 +336,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/bt19"
-                app:layout_constraintTop_toTopOf="@id/bt17" />
+                app:layout_constraintTop_toBottomOf="@+id/bt16" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
