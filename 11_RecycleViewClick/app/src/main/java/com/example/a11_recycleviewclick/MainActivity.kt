@@ -5,16 +5,59 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.a11_recycleviewclick.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var youtubeAdapter: YoutubeAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        val youtubeData = listOf(
+            YoutubeData(
+                R.drawable.youtubeimg1,
+                R.drawable.youtubeimg1,
+                "Tumi Bristi Cheyecho Bole | Mahtim sakib | New Lyrical Song 2024"
+            ),
+            YoutubeData(
+                R.drawable.youtubeimg2,
+                R.drawable.youtubeimg2,
+                "Tumi Bristi Cheyecho Bole | Mahtim sakib | New Lyrical Song 2024"
+            ),
+            YoutubeData(
+                R.drawable.youtubeimg3,
+                R.drawable.youtubeimg3,
+                "Tumi Bristi Cheyecho Bole | Mahtim sakib | New Lyrical Song 2024"
+            ),
+            YoutubeData(
+                R.drawable.youtubeimg1,
+                R.drawable.youtubeimg1,
+                "Tumi Bristi Cheyecho Bole | Mahtim sakib | New Lyrical Song 2024"
+            ),
+            YoutubeData(
+                R.drawable.youtubeimg2,
+                R.drawable.youtubeimg2,
+                "Tumi Bristi Cheyecho Bole | Mahtim sakib | New Lyrical Song 2024"
+            ),
+            YoutubeData(
+                R.drawable.youtubeimg3,
+                R.drawable.youtubeimg3,
+                "Tumi Bristi Cheyecho Bole | Mahtim sakib | New Lyrical Song 2024"
+            )
+        )
+
+        youtubeAdapter = YoutubeAdapter(youtubeData)
+        binding.recycleview.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = youtubeAdapter
         }
+
     }
+
+
 }

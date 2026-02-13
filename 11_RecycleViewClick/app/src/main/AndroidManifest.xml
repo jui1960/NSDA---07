@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._11_RecycleViewClick">
         <activity
+            android:name=".Details_item"
+            android:exported="false" />
+        <activity
             android:name=".item_list"
             android:exported="false" />
         <activity

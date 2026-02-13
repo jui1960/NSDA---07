@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Details_item">
+
+    <ImageView
+        android:id="@+id/image1details"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="10.dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/youtubeimg1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="This is Popular song"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="@id/image1details"
+        app:layout_constraintStart_toStartOf="@id/image1details"
+        app:layout_constraintTop_toBottomOf="@id/image1details" />
+</androidx.constraintlayout.widget.ConstraintLayout>
