@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             YoutubeData(
                 R.drawable.youtubeimg2,
                 R.drawable.youtubeimg2,
-                "Tumi Bristi Cheyecho Bole | Mahtim sakib | New Lyrical Song 2024"
+                "Ami Sei Shuto || আমি সেই সুতো || Tahsan || Uddeshsho Nei || New Bangla Song | Official Lyrical Video"
             ),
             YoutubeData(
                 R.drawable.youtubeimg3,
