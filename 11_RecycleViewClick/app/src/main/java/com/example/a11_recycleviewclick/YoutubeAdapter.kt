@@ -1,8 +1,10 @@
 package com.example.a11_recycleviewclick
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.a11_recycleviewclick.databinding.ActivityDetailsItemBinding
 import com.example.a11_recycleviewclick.databinding.ActivityItemListBinding
 
 
@@ -27,6 +29,16 @@ class YoutubeAdapter(private val youtubeData: List<YoutubeData>) :
         holder.binding.itemImg1.setImageResource(data.image)
         holder.binding.logoimg1.setImageResource(data.logoImage)
         holder.binding.videoTitle.text = data.Title
+
+
+        holder.binding.root.setOnClickListener {
+            val context = holder.binding.root.context
+            val intent = Intent(context, Details_item::class.java)
+            intent.putExtra("image",data.image)
+            intent.putExtra("logo", data.logoImage)
+            intent.putExtra("descreption",data.Title)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
