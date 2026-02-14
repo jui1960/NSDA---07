@@ -25,11 +25,13 @@
         android:id="@+id/weightlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
         android:hint="Enter Your Weight (Kg)"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcNICal"
         android:layout_marginHorizontal="20dp"
+
         android:layout_marginTop="20dp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -46,6 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Your Height (Inc)"
+        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/weightlayout"
