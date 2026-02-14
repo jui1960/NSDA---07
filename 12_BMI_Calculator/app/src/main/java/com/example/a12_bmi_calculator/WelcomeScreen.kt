@@ -1,20 +1,34 @@
 package com.example.a12_bmi_calculator
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.a12_bmi_calculator.databinding.ActivityWelcomeScreenBinding
 
 class WelcomeScreen : AppCompatActivity() {
+    private lateinit var binding: ActivityWelcomeScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_welcome_screen)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        binding = ActivityWelcomeScreenBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        binding.NextBtn.setOnClickListener {
+            val name = binding.EdTxt.text.toString().trim()
+            if (name.isEmpty()) {
+                binding.textInputLayout.error = "Please Enter Your Name"
+            } else {
+                binding.textInputLayout.error = null
+                val intent = Intent(this, CalculateScreen::class.java)
+                intent.putExtra("USER_NAME", name)
+                startActivity(intent)
+            }
         }
+
     }
 }

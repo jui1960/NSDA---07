@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._12_BMI_Calculator">
         <activity
+            android:name=".BmiResult"
+            android:exported="false" />
+        <activity
             android:name=".CalculateScreen"
             android:exported="false" />
         <activity
