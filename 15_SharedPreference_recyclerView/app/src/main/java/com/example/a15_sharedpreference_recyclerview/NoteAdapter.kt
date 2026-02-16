@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a15_sharedpreference_recyclerview.databinding.ActivityItemNoteBinding
-import com.example.a15_sharedpreference_recyclerview.databinding.ActivityMainBinding
 
 class NoteAdapter(private val notelist: List<Note>) :
     RecyclerView.Adapter<NoteAdapter.Noteviewholder>() {
@@ -20,7 +19,6 @@ class NoteAdapter(private val notelist: List<Note>) :
             ActivityItemNoteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return Noteviewholder(binding)
     }
-
     override fun onBindViewHolder(
         holder: Noteviewholder,
         position: Int
