@@ -18,9 +18,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val receivedNote = intent.getStringExtra("jui")
+        binding.txtnote.text = receivedNote
 
-        val input = intent.getStringExtra("INPUT")
-        binding.txtnote.text = input
+        val sharedPref = getSharedPreferences("note_sharepref", MODE_PRIVATE)
+        binding.txtnote.text = sharedPref.getString("note", "No note saved yet!")
+
 
         binding.btnAdd.setOnClickListener {
             val intent = Intent(this, InputScreen::class.java)
@@ -29,14 +32,4 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    override fun onResume() {
-        super.onResume()
-
-
-        val sharedPref = getSharedPreferences("note_sharepref", MODE_PRIVATE)
-        val savedNote = sharedPref.getString("note", "No note saved yet!")
-
-
-        binding.txtnote.text = savedNote
-    }
 }

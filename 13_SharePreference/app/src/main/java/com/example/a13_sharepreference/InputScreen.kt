@@ -28,13 +28,13 @@ class InputScreen : AppCompatActivity() {
         binding.btnSave.setOnClickListener {
 
             val inputtx = binding.EdTxt.text.toString()
+            sharePref.edit().putString("note",inputtx).apply()
 
 
-            sharePref.edit()
-                .putString("note",inputtx)
-                .apply()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("jui",inputtx)
+            startActivity(intent)
 
-            finish()
         }
 
     }
