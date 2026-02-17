@@ -1,5 +1,4 @@
 package com.example.a16_roomdatabase
-
 import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase

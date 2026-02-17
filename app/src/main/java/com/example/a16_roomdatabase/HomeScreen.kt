@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.a16_roomdatabase.AddNote
 import com.example.a16_roomdatabase.AppDatabase
 import com.example.a16_roomdatabase.databinding.ActivityHomeScreenBinding
 
@@ -27,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
             insets
         }
         binding.btnAdd.setOnClickListener {
-            startActivity(Intent(this, AddNote::class.java))
+            startActivity(Intent(this, AddActivity::class.java))
         }
         db = AppDatabase.getDatabase(this)
         loadData()
