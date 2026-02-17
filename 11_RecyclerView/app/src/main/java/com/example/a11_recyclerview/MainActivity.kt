@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         friendAdapter = FriendAdapter(friendlist)
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = friendAdapter
+            adapter = friendAdap
         }
 
     }

@@ -1,20 +1,53 @@
-package com.example.a16_roomdatabase
+package org.freedu.basicroomdbb7
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.a16_roomdatabase.AppDatabase
+import com.example.a16_roomdatabase.Note
+import com.example.a16_roomdatabase.databinding.ActivityAddNoteBinding
 
-class AddNote : AppCompatActivity() {
+
+class AddActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityAddNoteBinding
+
+    private lateinit var db: AppDatabase
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_add_note)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        binding = ActivityAddNoteBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //getDatabase function called
+        db = AppDatabase.getDatabase(this)
+
+        binding.button.setOnClickListener {
+
+            val name = binding.nameET.text.toString()
+            val address = binding.addressET.text.toString()
+
+            val notes = Note(name = name, address = address)
+
+
+            db.noteDao().insert(notes)
+
+            Toast.makeText(this@AddActivity, "data saved successfully", Toast.LENGTH_SHORT).show()
+
+            finish()
+
+
+        }
+
+
     }
 }
