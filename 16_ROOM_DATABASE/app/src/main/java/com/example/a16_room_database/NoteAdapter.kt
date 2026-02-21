@@ -32,6 +32,8 @@ class NoteAdapter(
         val note = list[position]
         holder.binding.name.text = note.name
         holder.binding.address.text = note.address
+        holder.binding.email.text = note.email
+        holder.binding.phone.text = note.phone
         holder.binding.editBtn.setOnClickListener {
             onedit(note)
         }
