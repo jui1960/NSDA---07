@@ -3,6 +3,7 @@ package com.example.a16_room_database
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -45,6 +46,9 @@ class HomeScreen : AppCompatActivity() {
 
     private fun loadData() {
         val list = db.notedao().getallNotes()
+        binding.cnt.text = "Note count : ${list.size}"
+
+
 
         val adapter = NoteAdapter(
             list,
@@ -53,13 +57,21 @@ class HomeScreen : AppCompatActivity() {
                 intent.putExtra("id", note.id)
                 intent.putExtra("name", note.name)
                 intent.putExtra("address", note.address)
-                intent.putExtra("email",note.email)
-                intent.putExtra("phone",note.phone)
+                intent.putExtra("email", note.email)
+                intent.putExtra("phone", note.phone)
                 startActivity(intent)
             },
             ondelete = { note ->
-                db.notedao().delete(note)
-                loadData()
+                AlertDialog.Builder(this)
+                    .setTitle("Expense Delete")
+                    .setMessage("Are you sure want to delete?")
+                    .setPositiveButton("Yes") { _, _ ->
+                        db.notedao().delete(note)
+                        loadData()
+
+                    }
+                    .setNegativeButton("No", null)
+                    .show()
             }
         )
         binding.recyclerView.adapter = adapter
