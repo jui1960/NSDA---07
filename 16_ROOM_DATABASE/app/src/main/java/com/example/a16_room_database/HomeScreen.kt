@@ -58,6 +58,7 @@ class HomeScreen : AppCompatActivity() {
                 intent.putExtra("name", note.name)
                 intent.putExtra("address", note.address)
                 intent.putExtra("email", note.email)
+                intent.putExtra("age",note.age)
                 intent.putExtra("phone", note.phone)
                 startActivity(intent)
             },

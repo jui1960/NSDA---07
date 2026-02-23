@@ -11,5 +11,6 @@ data class Note(
     val name: String,
     val address: String,
     val email: String,
+    val age : Int,
     val phone: String
 )

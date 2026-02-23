@@ -19,12 +19,6 @@ class AddActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityAddBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-
         db = AppDatabse.getdatabse(this)
 
         noteid = intent.getIntExtra("id", -1)
@@ -33,6 +27,7 @@ class AddActivity : AppCompatActivity() {
             binding.nameET.setText(intent.getStringExtra("name"))
             binding.addressET.setText(intent.getStringExtra("address"))
             binding.email.setText(intent.getStringExtra("email"))
+            binding.ageEt.setText("${intent.getIntExtra("age",0)}")
             binding.phone.setText(intent.getStringExtra("phone"))
         }
 
@@ -40,14 +35,16 @@ class AddActivity : AppCompatActivity() {
             val name = binding.nameET.text.toString()
             val address = binding.addressET.text.toString()
             val email = binding.email.text.toString()
+            val age = binding.ageEt.text.toString().toIntOrNull() ?: 0
+
             val phone = binding.phone.text.toString()
 
             if (noteid == -1) {
-                val note = Note(name = name, address = address, email = email, phone = phone)
+                val note = Note(name = name, address = address, email = email, age = age,phone = phone, )
                 db.notedao().insert(note)
             } else {
                 val note =
-                    Note(id = noteid, name = name, address = address, email = email, phone = phone)
+                    Note(id = noteid, name = name, address = address, email = email, age = age, phone = phone,)
                 db.notedao().update(note)
             }
             Toast.makeText(
