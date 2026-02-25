@@ -15,7 +15,7 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         loadnoteviewModel()
     }
 
-    private fun loadnoteviewModel() {
+    fun loadnoteviewModel() {
         liveData.value = repository.getallnotrepo()
 
     }

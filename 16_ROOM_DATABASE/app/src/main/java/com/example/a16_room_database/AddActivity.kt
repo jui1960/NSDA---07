@@ -6,11 +6,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.ViewModelProvider
 import com.example.a16_room_database.databinding.ActivityAddBinding
 
 class AddActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddBinding
-    private lateinit var db: AppDatabse
+
+    private lateinit var viewModel: NoteViewModel
     private var noteid = -1
 
 
@@ -19,7 +21,8 @@ class AddActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityAddBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        db = AppDatabse.getdatabse(this)
+
+        viewModel = ViewModelProvider(this)[NoteViewModel::class.java]
 
         noteid = intent.getIntExtra("id", -1)
 
@@ -41,11 +44,10 @@ class AddActivity : AppCompatActivity() {
 
             if (noteid == -1) {
                 val note = Note(name = name, address = address, email = email, age = age,phone = phone, )
-                db.notedao().insert(note)
+                viewModel.insertview(note)
             } else {
-                val note =
-                    Note(id = noteid, name = name, address = address, email = email, age = age, phone = phone,)
-                db.notedao().update(note)
+                val note = Note(id = noteid, name = name, address = address, email = email, age = age, phone = phone,)
+                    viewModel.updatertview(note)
             }
             Toast.makeText(
                 this@AddActivity, "data saved successfully",
