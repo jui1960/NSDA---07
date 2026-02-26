@@ -9,7 +9,8 @@ import com.example.a16_room_database.databinding.ActivityItemNoteBinding
 class NoteAdapter(
     private val list: List<Note>,
     private val onedit: (Note) -> Unit,
-    private val ondelete: (Note) -> Unit
+    private val ondelete: (Note) -> Unit,
+    private val onitem : (Note) -> Unit
 ) : RecyclerView.Adapter<NoteAdapter.viewHolder>() {
 
 
@@ -40,6 +41,9 @@ class NoteAdapter(
         }
         holder.binding.deleteBtn.setOnClickListener {
             ondelete(note)
+        }
+        holder.binding.root.setOnClickListener {
+            onitem(note)
         }
     }
 

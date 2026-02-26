@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.a16_room_database.databinding.ActivityHomeScreenBinding
 import com.example.a16_room_database.databinding.ActivityMainBinding
+import com.example.a16_room_database.databinding.DialogBinding
 
 class HomeScreen : AppCompatActivity() {
 
@@ -50,19 +51,41 @@ class HomeScreen : AppCompatActivity() {
                     startActivity(intent)
                 },
                 ondelete = { note ->
-                    AlertDialog.Builder(this)
-                        .setTitle("Expense Delete")
-                        .setMessage("Are you sure want to delete?")
-                        .setPositiveButton("Yes") { _, _ ->
+                    val dialogBinding = DialogBinding.inflate(layoutInflater)
+                    val dialog = AlertDialog.Builder(this)
+                        .setView(dialogBinding.root)
+                        .create()
+
+                    dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+                        dialogBinding.btnConfirm.setOnClickListener {
                             viewModel.deleteview(note)
+                            dialog.dismiss()
 
                         }
-                        .setNegativeButton("No", null)
-                        .show()
+                    dialogBinding.btnCancel.setOnClickListener {
+                        dialog.dismiss()
+                    }
+                    dialog.show()
+
+
+                },
+                onitem = { note->
+                    val intent = Intent(this@HomeScreen, singleProfileActivity::class.java)
+                    intent.putExtra("id", note.id)
+                    intent.putExtra("name", note.name)
+                    intent.putExtra("address", note.address)
+                    intent.putExtra("email", note.email)
+                    intent.putExtra("age", note.age)
+                    intent.putExtra("phone", note.phone)
+                    startActivity(intent)
                 }
             )
             binding.recyclerView.adapter = adapter
         }
+
+
+
     }
 
     override fun onResume() {

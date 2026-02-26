@@ -15,9 +15,6 @@
             android:name=".singleProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".SingleProfile"
-            android:exported="false" />
-        <activity
             android:name=".AddActivity"
             android:exported="false" />
         <activity

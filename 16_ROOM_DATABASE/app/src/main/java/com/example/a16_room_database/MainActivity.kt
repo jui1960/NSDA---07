@@ -23,8 +23,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        binding.btnContinue.setOnClickListener {
             startActivity(Intent(this, HomeScreen::class.java))
-        },2000)
+        }
+
+
     }
 }
