@@ -72,6 +72,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Address:"
                 android:textStyle="bold"
+                android:textSize="20.sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider" />
 
@@ -80,6 +81,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:textSize="20.sp"
                 android:text="Your Address Here"
                 app:layout_constraintBottom_toBottomOf="@id/lblAddress"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -93,6 +95,7 @@
                 android:layout_marginTop="12dp"
                 android:text="Email:"
                 android:textStyle="bold"
+                android:textSize="20.sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/lblAddress" />
 
@@ -102,6 +105,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="email@example.com"
+                android:textSize="20.sp"
                 app:layout_constraintBottom_toBottomOf="@id/lblEmail"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/lblEmail"
@@ -114,6 +118,7 @@
                 android:layout_marginTop="12dp"
                 android:text="Phone:"
                 android:textStyle="bold"
+                android:textSize="20.sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/lblEmail" />
 
@@ -125,6 +130,7 @@
                 android:text="01XXX-XXXXXX"
                 app:layout_constraintBottom_toBottomOf="@id/lblPhone"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="20.sp"
                 app:layout_constraintStart_toEndOf="@id/lblPhone"
                 app:layout_constraintTop_toTopOf="@id/lblPhone" />
 
@@ -135,6 +141,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="10dp"
                 android:text="Age:"
+                android:textSize="20.sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -145,7 +152,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="25"
+                android:text="21"
+                android:textSize="20.sp"
                 app:layout_constraintBottom_toBottomOf="@id/lblAge"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/lblAge"
