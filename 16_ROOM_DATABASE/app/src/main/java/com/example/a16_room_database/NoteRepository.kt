@@ -1,19 +1,17 @@
 package com.example.a16_room_database
 
-import androidx.lifecycle.LiveData
-
 class NoteRepository(private val notedaorepo : NoteDao) {
 
-    fun getallnotrepo(): List<Note>{
+    fun getAllNoteRepo(): List<Note>{
         return notedaorepo.getallNotes()
     }
-    fun insertrepo(note: Note){
+    fun insertRepo(note: Note){
         return notedaorepo.insert(note)
     }
-    fun updaterepo(note: Note){
+    fun updateRepo(note: Note){
         return notedaorepo.update(note)
     }
-    fun deleterepo(note: Note){
+    fun deleteRepo(note: Note){
         return notedaorepo.delete(note)
     }
 }

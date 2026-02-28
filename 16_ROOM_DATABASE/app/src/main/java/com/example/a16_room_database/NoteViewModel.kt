@@ -16,24 +16,24 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun loadnoteviewModel() {
-        liveData.value = repository.getallnotrepo()
+        liveData.value = repository.getAllNoteRepo()
 
     }
 
 
     fun insertview(note: Note) {
-        repository.insertrepo(note)
+        repository.insertRepo(note)
         loadnoteviewModel()
     }
 
 
     fun updatertview(note: Note) {
-        repository.updaterepo(note)
+        repository.updateRepo(note)
         loadnoteviewModel()
     }
 
     fun deleteview(note: Note) {
-        repository.deleterepo(note)
+        repository.deleteRepo(note)
         loadnoteviewModel()
     }
 }

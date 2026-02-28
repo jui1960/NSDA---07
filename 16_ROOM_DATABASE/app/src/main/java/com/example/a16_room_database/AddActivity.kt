@@ -47,7 +47,7 @@ class AddActivity : AppCompatActivity() {
                 viewModel.insertview(note)
             } else {
                 val note = Note(id = noteid, name = name, address = address, email = email, age = age, phone = phone,)
-                    viewModel.updatertview(note)
+                viewModel.updatertview(note)
             }
             Toast.makeText(
                 this@AddActivity, "data saved successfully",

@@ -14,7 +14,8 @@ class NoteAdapter(
 ) : RecyclerView.Adapter<NoteAdapter.viewHolder>() {
 
 
-    inner class viewHolder(val binding: ActivityItemNoteBinding) :
+    inner class viewHolder(val binding: ActivityItemNoteBinding)
+        :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(
@@ -41,6 +42,7 @@ class NoteAdapter(
         }
         holder.binding.deleteBtn.setOnClickListener {
             ondelete(note)
+
         }
         holder.binding.root.setOnClickListener {
             onitem(note)
