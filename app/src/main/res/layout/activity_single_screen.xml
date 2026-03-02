@@ -54,7 +54,7 @@
                 android:id="@+id/tvDetailName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Abir Rahman"
+                android:text=""
                 android:textColor="#212121"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -85,7 +85,7 @@
                 android:id="@+id/tvDetailPosition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Manager"
+                android:text=""
                 android:textColor="#212121"
                 android:textSize="17sp"
                 app:layout_constraintTop_toBottomOf="@id/lblPosition" />
