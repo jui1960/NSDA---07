@@ -18,10 +18,9 @@ class SingleScreen : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val id = intent.getIntExtra("id", -1)
         val name = intent.getStringExtra("name")
         val position = intent.getStringExtra("position")
-        val Educaiton = intent.getStringExtra("education")
+        val educaiton = intent.getStringExtra("education")
         val salary = intent.getIntExtra("salary", 0)
         val experience = intent.getIntExtra("experience", 0)
 
@@ -30,7 +29,7 @@ class SingleScreen : AppCompatActivity() {
 
             tvDetailName.text = name
             tvDetailSalary.text = position
-            tvDetailEducation.text = Educaiton
+            tvDetailEducation.text = educaiton
             tvDetailSalary.text = salary.toString()
             tvDetailExperience.text = experience.toString()
         }

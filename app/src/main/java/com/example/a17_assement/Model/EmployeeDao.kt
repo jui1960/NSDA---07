@@ -12,16 +12,19 @@ import androidx.room.Update
 interface EmployeeDao {
 
     @Insert
-    fun insert(data: Data)
+    suspend fun insert(data: Data)
 
     @Update
-    fun update(data: Data)
+    suspend fun update(data: Data)
 
     @Delete
-    fun delete(data: Data)
+    suspend fun delete(data: Data)
 
     @Query("select * from employees_data order by id DESC")
-    fun getAllData(): List<Data>
+    suspend fun getAllData(): List<Data>
+
+    @Query("select * from employees_data where name like '%' || :query || '%'")
+    suspend fun searchData(query: String): List<Data>
 
 
 }

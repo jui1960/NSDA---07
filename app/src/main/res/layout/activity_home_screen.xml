@@ -89,45 +89,28 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/searchLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        android:hint="Search employee..."
-        app:boxCornerRadiusTopStart="15dp"
-        app:boxCornerRadiusTopEnd="15dp"
-        app:boxCornerRadiusBottomEnd="15dp"
-        app:boxCornerRadiusBottomStart="15dp"
+        android:background="@drawable/search_bg"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search employee..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/statsCard"
-        app:startIconDrawable="@android:drawable/ic_menu_search"
-        app:startIconTint="@color/black">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etSearch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:paddingStart="43dp"
-            android:paddingVertical="12dp"
-            android:textColor="@color/black"
-            android:textSize="17sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@id/statsCard" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvEmployees"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:clipToPadding="false"
-        android:paddingHorizontal="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchLayout"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
         tools:listitem="@layout/item_list" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

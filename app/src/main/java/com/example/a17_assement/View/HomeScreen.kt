@@ -6,18 +6,21 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.DialogTitle
+import androidx.appcompat.widget.SearchView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.room.Query
 import com.example.a17_assement.R
 import com.example.a17_assement.ViewModel.EmployeeAdapter
 import com.example.a17_assement.ViewModel.EmployeeViewModel
 import com.example.a17_assement.databinding.ActivityAddScreenBinding
 import com.example.a17_assement.databinding.ActivityHomeScreenBinding
 import com.example.a17_assement.databinding.DialogBinding
+import org.w3c.dom.Text
 
 class HomeScreen : AppCompatActivity() {
     private lateinit var binding: ActivityHomeScreenBinding
@@ -83,6 +86,20 @@ class HomeScreen : AppCompatActivity() {
             binding.rvEmployees.adapter = adapter
 
         }
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                if (!newText.isNullOrEmpty()) {
+                    employViewModel.searchView(newText)
+                } else {
+                    employViewModel.loadViewModel()
+                }
+                return true
+            }
+        })
 
 
     }
